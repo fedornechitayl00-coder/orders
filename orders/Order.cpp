@@ -56,14 +56,14 @@ Time Order::timeOrderIsReady() const
 
 void Order::makeACheck() const
 {
-	std::cout << "\tCheck\n" << getNumberOrder() <<
-		"\n_____________________________________\n";
+	std::cout << "\033[30;107m\tCheck\n\033[0m\n" << getNumberOrder() <<
+		"_____________________________________\n";
 	std::cout << "DATE: " << getDateOrder() << "\t" << getTimeOrder() <<
 		"\nORDER IS READY: " << timeOrderIsReady() <<
 		"\n_____________________________________\n" <<
 		descriptionOfOrder <<
 		"\n_____________________________________\n" <<
-		"TOTAL: " << getPriceOrder();
+		"TOTAL: " << getPriceOrder() << std::endl;
 }
 
 std::ostream& operator<<(std::ostream& out, const Order& obj)

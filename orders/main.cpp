@@ -24,17 +24,15 @@ int main()
 	system.addOrder(order2);
 	system.addOrder(order3);
 
-	std::cout << "__________________________________\n\n";
-
 	system.sortOrdersBy_CookReady();
 
-	std::cout << "\n____________________________________\n making orders:...\n";
+	std::cout << "\n____________________________________\n\n \033[32;47mmaking orders:...\033[0m\n\n";
 	system.doneOneOrder();  //delete № 3 - 15min
 
-	std::cout << "......\n";
+	std::cout << "\n......\n";
 	system.doneOneOrder();  //delete №1 - 25 min
 
-	std::cout << "........\n";
+	std::cout << "\n........\n";
 	system.doneOneOrder();  //delete №2 - 40 min
 
 	return 0;
